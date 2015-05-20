@@ -130,15 +130,35 @@ img, video, audio, iframe, table, form {
   top: 185px;
   right: 20px;
   width: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #social a {
   display: block;
   width: 40px;
   height: 40px;
-  background: yellow;
+  /*background: yellow;*/
+  text-indent: 100% ;  /*to hide the text by moving it outside of its element of 40px*/
+  white-space: nowrap; /*so that the text does not wrap below its element of 40 px*/
+  overflow: hidden; /* to hide anything-the text pused out-that overflows out of the element*/
 }
+
+a.twit, a.fbook, a.gplus {
+  background: url(../images/social-icons.png) no-repeat;
+}
+
+a.fbook {background-position: 0 0;}
+a.fbook:hover {background-position: -40px 0;}
+a.fbook:active {background-position: -80px 0;}
+
+a.twit {background-position: 0 -40px;}
+a.twit:hover {background-position: -40px -40px;}
+a.twit:active {background-position: -80px -40px;}
+
+a.gplus {background-position: 0 -80px;}
+a.gplus:hover {background-position: -40px -80px;}
+a.gplus:active {background-position: -80px -80px;}
+
 
 /*////////// HEADER //////////*/
 
